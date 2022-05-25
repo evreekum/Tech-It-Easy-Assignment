@@ -11,14 +11,11 @@ export const tvTypes = inventory.map((tvType) => {
 
 
 
-
-
 //__________1b___________
 
 export const soldOuts = inventory.filter((soldOut) => {
     return soldOut.originalStock === soldOut.sold;
 });
-
 
 
 
@@ -37,7 +34,6 @@ const newInventory = inventory.slice();
 export const lowToHigh = newInventory.sort((a, b) => {
     return a.price - b.price;
 });
-
 
 
 

@@ -19,18 +19,12 @@ export function tvFormat(selectedTv) {
 
 
 
-//__________4b______________
-
-/*export const createTvPrice = inventory.filter((tvPrice) => {
-    return `€${tvPrice.price === tvPrice},-`;
-});
-const priceInEuro = createTvPrice (179);
-console.log(priceInEuro);*/
+//__________4b______________s
 
 const currentTvPrice = inventory[0].price;
 
-export function pricesTv(tvPrice) {
-    return `€${tvPrice}-,`;
+function pricesTv(tvPrice) {
+    return `€${tvPrice},-`;
 }
 
 export const euroPrice = pricesTv(currentTvPrice);
@@ -46,7 +40,7 @@ export const euroPrice = pricesTv(currentTvPrice);
 //for loop
 
 
-export const opdracht4c = ( tv ) => {
+const opdracht4c = (tv) => {
     let output = " ";
 
     tv.availableSizes.map((size) => {
@@ -56,39 +50,23 @@ export const opdracht4c = ( tv ) => {
     return output
 
 }
+export const tvSizes = opdracht4c(inventory[0]);
 
 
+//__________4d__________
 
-
-/*
-for (let i = 0; i < availableSizes.length; i++) {
-    return sizeInches.availableSizes / 2.54;
+export function tvInformation(selectedTv) {
+    return `
+    ${selectedTv.brand} ${selectedTv.type} - ${selectedTv.name}
+    ${euroPrice}
+    ${tvSizes}`;
 }
 
 
-const createInchesToCm = () => {
-    return inventory.filter((sizeInches) => {
 
+//__________4e__________
 
-    })
-}
-*/
-
-/*
-const createInchesToCm = inventory.filter((sizeInches) => {
-    for (let i = 0; i < availableSizes.length; i++) {
-        return sizeInches.availableSizes / 2.54;
-    }
-
-})
-console.log(createInchesToCm)
-*/
-
-/*
-export function inchesToCm (tvInch, tvCm) {
-    tvCm = 2.54;
-    return tvInch.availableSizes / tvCm;
+export function allTvInfo () {
+    return `${inventory[0]}`
 }
 
-console.log(inchesToCm())
-*/
